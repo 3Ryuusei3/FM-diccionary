@@ -1,0 +1,8 @@
+body {
+	font-family: var(--sans-serif);
+}
+
+button {
+	border: none;
+	background-color: transparent;
+}

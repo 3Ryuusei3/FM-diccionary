@@ -1,0 +1,45 @@
+header {
+	padding: var(--gap-lg);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.headerControls {
+	display: flex;
+	gap: var(--gap-md);
+}
+
+.fontPicker {
+	display: flex;
+	gap: var(--gap-xs);
+}
+
+.fontPicker p {
+	font-weight: var(--fw-header);
+}
+
+.dmControls {
+	display: flex;
+	align-items: center;
+	gap: var(--gap-xs);
+}
+
+.dmToggle {
+	position: relative;
+	width: 60px;
+	height: 24px;
+	border-radius: 16px;
+	background-color: var(--lm-gray);
+}
+
+.dmHandler {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: var(--lm-primary);
+	cursor: pointer;
+}

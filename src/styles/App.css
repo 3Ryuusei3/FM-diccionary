@@ -3,6 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&display=swap");
 
+/* Styling importing */
+@import "./General.css";
+@import "./Main.css";
+@import "./Header.css";
+
 :root {
 	/* Colors */
 	--lm-primary: #ffffff;
@@ -20,16 +25,16 @@
 	--error: #ff5252;
 
 	/* Font-sizes */
-	--header-lg: calc(64px + (77 - 64) * ((100vw - 400px) / (1600 - 400)));
-	--header-md: calc(24px + (29 - 24) * ((100vw - 400px) / (1600 - 400)));
-	--header-sm: calc(20px + (24 - 20) * ((100vw - 400px) / (1600 - 400)));
+	--fs-header-lg: calc(64px + (77 - 64) * ((100vw - 400px) / (1600 - 400)));
+	--fs-header-md: calc(24px + (29 - 24) * ((100vw - 400px) / (1600 - 400)));
+	--fs-header-sm: calc(20px + (24 - 20) * ((100vw - 400px) / (1600 - 400)));
 
-	--body-md: calc(18px + (24 - 18) * ((100vw - 400px) / (1600 - 400)));
-	--body-sm: calc(14px + (17 - 14) * ((100vw - 400px) / (1600 - 400)));
+	--fs-body-md: calc(18px + (24 - 18) * ((100vw - 400px) / (1600 - 400)));
+	--fs-body-sm: calc(14px + (17 - 14) * ((100vw - 400px) / (1600 - 400)));
 
 	/* Font-weight */
-	--header: 700;
-	--body: 400;
+	--fw-header: 700;
+	--fw-body: 400;
 
 	/* Font family */
 	--sans-serif: "Inter", sans-serif;
