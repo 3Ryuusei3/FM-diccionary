@@ -22,11 +22,21 @@ header {
 
 .fontSelector {
 	position: absolute;
-	top: 50px;
+	top: 60px;
 	left: -50px;
 	border-radius: 16px;
 	box-shadow: 0px 0px 10px #00000033;
 	padding: var(--gap-xxs) var(--gap-xl) var(--gap-xxs) var(--gap-sm);
+}
+
+.fontSelector button {
+	display: block;
+}
+
+.fontSelector p {
+	font-size: var(--fs-body-sm);
+	text-align: left;
+	width: 100px;
 }
 
 .dmControls {
