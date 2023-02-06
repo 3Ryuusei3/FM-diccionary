@@ -1,5 +1,5 @@
 header {
-	padding: var(--gap-lg);
+	padding: var(--gap-sm) var(--gap-md);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -11,12 +11,22 @@ header {
 }
 
 .fontPicker {
+	position: relative;
 	display: flex;
 	gap: var(--gap-xs);
 }
 
 .fontPicker p {
 	font-weight: var(--fw-header);
+}
+
+.fontSelector {
+	position: absolute;
+	top: 50px;
+	left: -50px;
+	border-radius: 16px;
+	box-shadow: 0px 0px 10px #00000033;
+	padding: var(--gap-xxs) var(--gap-xl) var(--gap-xxs) var(--gap-sm);
 }
 
 .dmControls {
@@ -30,16 +40,63 @@ header {
 	width: 60px;
 	height: 24px;
 	border-radius: 16px;
-	background-color: var(--lm-gray);
+	background-color: var(--lm-subtext);
 }
 
 .dmHandler {
 	position: absolute;
-	top: 3px;
-	left: 3px;
 	width: 18px;
 	height: 18px;
 	border-radius: 50%;
-	background-color: var(--lm-primary);
+	background-color: var(--lm-bg);
 	cursor: pointer;
+}
+
+.dmSwitch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 24px;
+}
+
+.dmSwitch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--lm-subtext);
+	transition: 0.4s;
+	border-radius: 34px;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 4px;
+	bottom: 3px;
+	background-color: var(--lm-bg);
+	transition: 0.4s;
+	border-radius: 50%;
+}
+
+.dmSwitch input:checked + .slider {
+	background-color: var(--main);
+}
+
+.dmSwitch input:focus + .slider {
+	box-shadow: 0 0 1px var(--main);
+}
+
+.dmSwitch input:checked + .slider:before {
+	transform: translateX(34px);
 }

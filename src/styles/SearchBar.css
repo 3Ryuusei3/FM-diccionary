@@ -1,0 +1,8 @@
+.searchBar {
+	padding: var(--gap-md);
+	background-color: var(--lm-bg);
+}
+
+[data-theme="dark"] .searchBar {
+	background-color: var(--dm-bg);
+}

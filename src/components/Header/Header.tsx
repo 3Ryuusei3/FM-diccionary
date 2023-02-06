@@ -1,8 +1,18 @@
+import React from "react"
+
+import { ThemeContextType, Theme } from "./../../context/theme"
+import { ThemeContext } from "./../../context/ThemeContext"
+
 import dictionaryLogo from "./../../assets/images/logo.svg"
 import arrowDown from "./../../assets/images/icon-arrow-down.svg"
 import dmIcon from "./../../assets/images/icon-moon.svg"
 
-function Header() {
+export function Header() {
+	const { appTheme, changeTheme } = React.useContext(ThemeContext) as ThemeContextType
+	const handleThemeToggle = () => {
+		appTheme === "light" ? changeTheme("dark") : changeTheme("light")
+	}
+
 	return (
 		<header>
 			<a href="#">
@@ -16,14 +26,13 @@ function Header() {
 					</button>
 				</div>
 				<div className="dmControls">
-					<div className="dmToggle">
-						<div className="dmHandler"></div>
-					</div>
+					<label className="dmSwitch">
+						<input type="checkbox" onChange={handleThemeToggle} />
+						<span className="slider round"></span>
+					</label>
 					<img src={dmIcon} alt="moon icon" />
 				</div>
 			</div>
 		</header>
 	)
 }
-
-export default Header

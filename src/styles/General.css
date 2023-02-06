@@ -1,8 +1,26 @@
 body {
 	font-family: var(--sans-serif);
+	margin: 0;
+	padding: 0;
+}
+
+[data-theme="light"].wrapper {
+	background-color: var(--lm-bg);
+}
+
+[data-theme="dark"].wrapper {
+	background-color: var(--dm-bg);
 }
 
 button {
 	border: none;
 	background-color: transparent;
+}
+
+[data-theme="light"] p {
+	color: var(--lm-text);
+}
+
+[data-theme="dark"] p {
+	color: var(--dm-text);
 }

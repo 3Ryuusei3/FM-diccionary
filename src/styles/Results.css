@@ -1,0 +1,9 @@
+.results {
+	padding: var(--gap-md);
+	background-color: var(--lm-bg);
+	min-height: 72vh;
+}
+
+[data-theme="dark"] .results {
+	background-color: var(--dm-bg);
+}

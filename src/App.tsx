@@ -1,12 +1,12 @@
-import Header from "./components/Header/Header"
-import "./styles/App.css"
+import ThemeProvider from "./context/ThemeContext"
 
-function App() {
+import "./styles/App.css"
+import MainPage from "./pages/MainPage/MainPage"
+
+export function App() {
 	return (
-		<div className="wrapper">
-			<Header />
-		</div>
+		<ThemeProvider>
+			<MainPage />
+		</ThemeProvider>
 	)
 }
-
-export default App
