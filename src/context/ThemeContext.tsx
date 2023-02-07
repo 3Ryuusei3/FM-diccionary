@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import { Theme, ThemeContextType } from "./theme"
 
@@ -8,7 +8,7 @@ type ThemeContextProviderProps = {
 export const ThemeContext = React.createContext<ThemeContextType | null>(null)
 
 const ThemeProvider = ({ children }: ThemeContextProviderProps) => {
-	const [themeMode, setThemeMode] = React.useState<Theme>("light")
+	const [themeMode, setThemeMode] = useState<Theme>("light")
 	return <ThemeContext.Provider value={{ appTheme: themeMode, changeTheme: setThemeMode }}>{children}</ThemeContext.Provider>
 }
 

@@ -1,25 +1,26 @@
-body {
+* {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
-[data-theme="light"].wrapper {
+[data-theme="light"].pageContent {
 	background-color: var(--lm-bg);
 }
 
-[data-theme="dark"].wrapper {
+[data-theme="dark"].pageContent {
 	background-color: var(--dm-bg);
 }
 
-[data-font="Sans Serif"].wrapper * {
+[data-font="Sans Serif"].pageContent * {
 	font-family: var(--sans);
 }
 
-[data-font="Serif"].wrapper * {
+[data-font="Serif"].pageContent * {
 	font-family: var(--serif);
 }
 
-[data-font="Mono"].wrapper * {
+[data-font="Mono"].pageContent * {
 	font-family: var(--mono);
 }
 
