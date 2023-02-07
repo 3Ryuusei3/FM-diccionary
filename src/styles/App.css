@@ -40,7 +40,7 @@
 	--fw-body: 400;
 
 	/* Font family */
-	--sans-serif: "Inter", sans-serif;
+	--sans: "Inter", sans-serif;
 	--serif: "Lora", serif;
 	--mono: "Inconsolata", monospace;
 

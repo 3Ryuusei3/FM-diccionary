@@ -2,7 +2,10 @@ import React, { useState } from "react"
 
 import { ThemeContextType } from "./../../context/theme"
 import { ThemeContext } from "./../../context/ThemeContext"
+import { FontContextType } from "./../../context/font"
+import { FontContext } from "./../../context/FontContext"
 
+import { headerFonts } from "../../const/headerFonts"
 import dictionaryLogo from "./../../assets/images/logo.svg"
 import arrowDown from "./../../assets/images/icon-arrow-down.svg"
 import dmIcon from "./../../assets/images/icon-moon.svg"
@@ -10,6 +13,7 @@ import dmIcon from "./../../assets/images/icon-moon.svg"
 export function Header() {
 	const [fontModal, setFontModal] = useState(false)
 	const { appTheme, changeTheme } = React.useContext(ThemeContext) as ThemeContextType
+	const { appFont, changeFont } = React.useContext(FontContext) as FontContextType
 
 	const handleThemeToggle = () => {
 		appTheme === "light" ? changeTheme("dark") : changeTheme("light")
@@ -19,6 +23,11 @@ export function Header() {
 		setFontModal(true)
 	}
 
+	const handleAppFont = (font: any) => {
+		changeFont(font)
+		setFontModal(false)
+	}
+
 	return (
 		<header>
 			<a href="#">
@@ -26,20 +35,18 @@ export function Header() {
 			</a>
 			<div className="headerControls">
 				<div className="fontPicker">
-					<p>Sans Serif</p>
-					<button onClick={() => openFontModal()}>
+					<div className="fontButton" onClick={() => openFontModal()}>
+						<p>{appFont}</p>
 						<img src={arrowDown} alt="arrow down" />
-					</button>
+					</div>
 					<div className="fontSelector" style={fontModal ? { display: "block" } : { display: "none" }}>
-						<button>
-							<p style={{ fontFamily: "var(--sans-serif)" }}>Sans Serif</p>
-						</button>
-						<button>
-							<p style={{ fontFamily: "var(--serif)" }}>Serif</p>
-						</button>
-						<button>
-							<p style={{ fontFamily: "var(--mono)" }}>Mono</p>
-						</button>
+						{headerFonts.map((elm: any) => {
+							return (
+								<button key={elm.var} onClick={() => handleAppFont(elm.name)}>
+									<p style={{ fontFamily: `var(--${elm.var})` }}>{elm.name}</p>
+								</button>
+							)
+						})}
 					</div>
 				</div>
 				<div className="dmControls">

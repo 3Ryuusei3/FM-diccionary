@@ -20,6 +20,13 @@ header {
 	font-weight: var(--fw-header);
 }
 
+.fontButton {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	place-items: center;
+	gap: var(--gap-xs);
+}
+
 .fontSelector {
 	position: absolute;
 	top: 60px;

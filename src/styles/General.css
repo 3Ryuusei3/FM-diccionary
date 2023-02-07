@@ -1,5 +1,4 @@
 body {
-	font-family: var(--sans-serif);
 	margin: 0;
 	padding: 0;
 }
@@ -10,6 +9,18 @@ body {
 
 [data-theme="dark"].wrapper {
 	background-color: var(--dm-bg);
+}
+
+[data-font="Sans Serif"].wrapper * {
+	font-family: var(--sans);
+}
+
+[data-font="Serif"].wrapper * {
+	font-family: var(--serif);
+}
+
+[data-font="Mono"].wrapper * {
+	font-family: var(--mono);
 }
 
 button {

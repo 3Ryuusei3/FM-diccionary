@@ -4,13 +4,16 @@ import { Results } from "../../components/Results/Results"
 import { SearchBar } from "../../components/SearchBar/SearchBar"
 
 import { ThemeContext } from "../../context/ThemeContext"
-import { Theme, ThemeContextType } from "./../../context/theme"
+import { ThemeContextType } from "./../../context/theme"
+import { FontContext } from "../../context/FontContext"
+import { FontContextType } from "./../../context/font"
 
 function MainPage() {
 	const { appTheme } = React.useContext(ThemeContext) as ThemeContextType
+	const { appFont } = React.useContext(FontContext) as FontContextType
 
 	return (
-		<div className="wrapper" data-theme={appTheme}>
+		<div className="wrapper" data-theme={appTheme} data-font={appFont}>
 			<Header />
 			<SearchBar />
 			<Results />

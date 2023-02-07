@@ -1,4 +1,5 @@
 import ThemeProvider from "./context/ThemeContext"
+import FontProvider from "./context/FontContext"
 
 import "./styles/App.css"
 import MainPage from "./pages/MainPage/MainPage"
@@ -6,7 +7,9 @@ import MainPage from "./pages/MainPage/MainPage"
 export function App() {
 	return (
 		<ThemeProvider>
-			<MainPage />
+			<FontProvider>
+				<MainPage />
+			</FontProvider>
 		</ThemeProvider>
 	)
 }
