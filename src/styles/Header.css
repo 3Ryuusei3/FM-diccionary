@@ -28,12 +28,21 @@ header {
 }
 
 .fontSelector {
+	padding: var(--gap-sm) var(--gap-xl) var(--gap-sm) var(--gap-sm);
+	flex-direction: column;
+	gap: 26px;
 	position: absolute;
+	z-index: 20;
 	top: 60px;
 	left: -50px;
 	border-radius: 16px;
+	background-color: var(--lm-bg);
 	box-shadow: 0px 0px 10px #00000033;
-	padding: var(--gap-xxs) var(--gap-xl) var(--gap-xxs) var(--gap-sm);
+}
+
+[data-theme="dark"] .fontSelector {
+	background-color: var(--dm-bg);
+	box-shadow: 0px 0px 10px #a445ed;
 }
 
 .fontSelector button {

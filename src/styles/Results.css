@@ -1,9 +1,115 @@
 .results {
 	padding: var(--gap-md);
 	background-color: var(--lm-bg);
-	min-height: 72vh;
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-lg);
 }
 
 [data-theme="dark"] .results {
 	background-color: var(--dm-bg);
+}
+
+.resultsHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.resultName {
+	font-size: var(--fs-header-lg);
+	font-weight: var(--fw-header);
+	margin-bottom: var(--gap-xxxs);
+}
+
+.resultPhonetics {
+	font-size: var(--fs-header-md);
+	color: var(--main) !important;
+}
+
+.entryWordType {
+	display: flex;
+	align-items: center;
+	font-size: var(--fs-header-md);
+	font-weight: var(--fw-header);
+	font-style: italic;
+}
+
+.entryWordType::after {
+	content: "";
+	flex: 1;
+	border-bottom: 1px solid var(--separator) !important;
+}
+
+.entryWordType:not(:empty)::after {
+	margin-top: 0.2rem;
+	margin-left: 1em;
+}
+
+.resultsBody {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-xxl);
+}
+
+.entrySubtitle {
+	font-size: var(--fs-header-sm);
+	color: var(--lm-subtext) !important;
+	margin-top: var(--gap-lg);
+	margin-right: var(--gap-xxxs);
+}
+
+.entrySynonyms {
+	margin-left: var(--gap-xxxs);
+	color: var(--main);
+	font-size: var(--fs-header-sm);
+	font-weight: var(--fw-header);
+}
+
+.resultDefinitionList ul {
+	margin: 30px 0 60px 40px;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-xxs);
+}
+
+.resultDefinitionList ul li {
+	line-height: 24px;
+	font-size: var(--fw-body-md);
+	color: var(--lm-text);
+}
+
+[data-theme="dark"] .resultDefinitionList ul li {
+	color: var(--dm-text);
+}
+
+.resultDefinitionList ul li:before {
+	content: "\2022";
+	color: var(--main);
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1.5em;
+	margin-right: 0.5rem;
+}
+
+.divider {
+	height: 1px;
+	border-top: 1px solid var(--separator) !important;
+	margin: 16px 0;
+}
+
+.resultsSource span {
+	color: var(--lm-subtext);
+	font-size: var(--fs-bodys-sm);
+	margin-right: 10px;
+}
+
+.resultsSource a {
+	color: var(--lm-text);
+}
+
+[data-theme="dark"] .resultsSource a {
+	color: var(--dm-text);
 }
