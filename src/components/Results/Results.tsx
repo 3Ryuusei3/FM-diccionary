@@ -10,7 +10,7 @@ export const Results: FunctionComponent<resultsProps> = ({ result }) => {
 	console.log(result)
 	return (
 		<>
-			{result !== undefined && (
+			{result !== undefined ? (
 				<div className="results">
 					<div className="resultsHeader">
 						<div>
@@ -51,6 +51,12 @@ export const Results: FunctionComponent<resultsProps> = ({ result }) => {
 						<span>Source: </span>
 						<a href={result.sourceUrls}>{result.sourceUrls}</a>
 					</div>
+				</div>
+			) : (
+				<div className="noResults">
+					<p>😕</p>
+					<p>No Definitions Found</p>
+					<p>Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at later time or head to the web instead.</p>
 				</div>
 			)}
 		</>

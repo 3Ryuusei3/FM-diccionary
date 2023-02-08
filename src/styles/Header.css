@@ -38,6 +38,7 @@ header {
 	border-radius: 16px;
 	background-color: var(--lm-bg);
 	box-shadow: 0px 0px 10px #00000033;
+	cursor: pointer;
 }
 
 [data-theme="dark"] .fontSelector {
@@ -53,6 +54,10 @@ header {
 	font-size: var(--fs-body-sm);
 	text-align: left;
 	width: 100px;
+}
+
+.fontSelector p:hover {
+	color: var(--main);
 }
 
 .dmControls {

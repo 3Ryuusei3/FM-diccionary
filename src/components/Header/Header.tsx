@@ -39,7 +39,7 @@ export function Header() {
 						<p>{appFont}</p>
 						<img src={arrowDown} alt="arrow down" />
 					</div>
-					<div className="fontSelector" style={fontModal ? { display: "block" } : { display: "none" }}>
+					<div className="fontSelector" style={fontModal ? { display: "flex" } : { display: "none" }}>
 						{headerFonts.map((elm: any) => {
 							return (
 								<button key={elm.var} onClick={() => handleAppFont(elm.name)}>

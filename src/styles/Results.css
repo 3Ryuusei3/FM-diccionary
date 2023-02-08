@@ -113,3 +113,26 @@
 [data-theme="dark"] .resultsSource a {
 	color: var(--dm-text);
 }
+
+.noResults {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: var(--gap-sm);
+	padding: var(--gap-xxl) var(--gap-md);
+}
+
+.noResults p:first-child {
+	font-size: var(--fs-header-lg);
+}
+
+.noResults p:nth-child(2) {
+	font-size: var(--fs-header-sm);
+	font-weight: var(--fw-header);
+}
+.noResults p:nth-child(3) {
+	font-size: var(--fs-body-md);
+	color: var(--lm-subtext);
+	max-width: 65ch;
+}
