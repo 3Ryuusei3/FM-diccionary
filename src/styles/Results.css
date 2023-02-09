@@ -49,7 +49,7 @@
 .resultsBody {
 	display: flex;
 	flex-direction: column;
-	gap: var(--gap-xxl);
+	gap: var(--gap-lg);
 }
 
 .entrySubtitle {
@@ -64,10 +64,15 @@
 	color: var(--main);
 	font-size: var(--fs-header-sm);
 	font-weight: var(--fw-header);
+	cursor: pointer;
+}
+
+.entrySynonyms:hover {
+	text-decoration: underline;
 }
 
 .resultDefinitionList ul {
-	margin: 30px 0 60px 40px;
+	margin: 30px 0 50px 40px;
 	list-style: none;
 	display: flex;
 	flex-direction: column;
@@ -100,7 +105,7 @@
 	margin: 16px 0;
 }
 
-.resultsSource span {
+.resultsSource > span {
 	color: var(--lm-subtext);
 	font-size: var(--fs-bodys-sm);
 	margin-right: 10px;
@@ -108,10 +113,19 @@
 
 .resultsSource a {
 	color: var(--lm-text);
+	margin-left: 5px;
 }
 
 [data-theme="dark"] .resultsSource a {
 	color: var(--dm-text);
+}
+
+.resultsSource a:hover {
+	color: var(--main);
+}
+
+.sourceItem {
+	display: inline;
 }
 
 .noResults {

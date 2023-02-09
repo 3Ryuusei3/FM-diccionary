@@ -15,15 +15,17 @@ function MainPage() {
 	const { appFont } = React.useContext(FontContext) as FontContextType
 
 	const [query, setQuery] = useState("")
-	const [result, setResult] = useState()
+	const [result, setResult] = useState({})
+	const [error, setError] = useState({})
 
 	const getDictionaryEntry = () => {
 		dictionaryService
 			.getDictionaryEntry(query)
 			.then(({ data }: any) => {
 				setResult(data[0])
+				data[0].word && setError({})
 			})
-			.catch((err: any) => console.log(err))
+			.catch((err: any) => setError(err))
 	}
 
 	useEffect(() => {
@@ -35,7 +37,7 @@ function MainPage() {
 			<div className="wrapper">
 				<Header />
 				<SearchBar query={query} setQuery={setQuery} />
-				<Results result={result} />
+				<Results result={result} setQuery={setQuery} error={error} />
 			</div>
 		</div>
 	)
